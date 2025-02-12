@@ -50,9 +50,9 @@ Installation & Configurations
 
 10.add repo for grafana and update helm repo .
 
- helm repo add grafana  https://grafana.github.io/helm-charts
+10.1 helm repo add grafana  https://grafana.github.io/helm-charts
 
- helm repo update
+ 10.2 helm repo update
 
  ![image](https://github.com/user-attachments/assets/ef75559f-d0e0-490d-b33d-9346d6ef6771)
 
