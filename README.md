@@ -48,6 +48,29 @@ Installation & Configurations
 
 
 
+10.add repo for grafana and update helm repo .
+
+ helm repo add grafana  https://grafana.github.io/helm-charts
+
+ helm repo update
+
+ ![image](https://github.com/user-attachments/assets/ef75559f-d0e0-490d-b33d-9346d6ef6771)
+
+
+11.  helm install grafana grafana/grafana
+
+12.  decode password wit username admin and login
+
+13. kubectl expose service grafana --type=NodePort --target-port=3000 --name=grafana-ext  ( expose grafana  service into nodeport type )
+
+14. access grafana web ui wit port no and ip address 
+
+
+
+![image](https://github.com/user-attachments/assets/b1fcffb1-8c63-4b8b-98a7-8f03586565d5)
+
+
+
 
 
 
