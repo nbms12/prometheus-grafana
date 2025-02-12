@@ -10,8 +10,14 @@ It can be configured and set up on both bare-metal servers and container environ
 Installation & Configurations
 
 1.install helm as package manager for kubernetes applications , install and set env path.
-2. helm repo add prometheus-community https://prometheus-community.github.io/helm-charts ( adding prometheus repo ) 
+
+
+2. helm repo add prometheus-community https://prometheus-community.github.io/helm-charts ( adding prometheus repo )
+
+
+
 3. helm repo update
+
 4.helm install prometheus prometheus-community/prometheus ( installation ) 
 
 
@@ -23,11 +29,24 @@ Installation & Configurations
    ![image](https://github.com/user-attachments/assets/201291bc-6f5b-471c-b566-e78ec29c15ff)
 
 
-6. see services in prometheus
+6. see services in prometheus wit cluster ip assigned .
+
 
    ![image](https://github.com/user-attachments/assets/9a10aa76-5bc6-41a5-979c-d2ed671859e5)
+   
 
-7.
+8. now change cluster ip into nodeport type service for prometheus-server to see web ui for it
+
+   kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-ext
+
+
+   ![image](https://github.com/user-attachments/assets/248ccc5a-9d49-4555-8faa-bcde2e5ed44f)
+
+9. access via minikube ip and nodeport
+
+    ![image](https://github.com/user-attachments/assets/ab27dcdc-b9ce-4d52-af9d-509eecdb05d9)
+
+
 
 
 
